@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #d6d7cc;
+  --text: #000000;
+  --header-height: 60px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Lekton', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ─── HEADER ─── */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  z-index: 100;
+  border-bottom: 1px solid var(--text);
+}
+
+.logo a {
+  display: block;
+  line-height: 0;
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+nav a {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--text);
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  opacity: 0.55;
+}
+
+/* ─── MAIN ─── */
+
+main {
+  padding-top: var(--header-height);
+  min-height: 100vh;
+}
+
+/* ─── LANDING PAGE ─── */
+
+.landing-container {
+  height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 48px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 48px;
+  max-width: 880px;
+  width: 100%;
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.project-card-img {
+  width: 100%;
+  /* fit two rows + labels + gaps inside the viewport */
+  height: calc((100vh - var(--header-height) - 56px - 20px - 76px) / 2);
+  overflow: hidden;
+  background-color: #c2c3b8;
+}
+
+.project-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.project-card:hover .project-card-img img {
+  transform: scale(1.04);
+  filter: brightness(0.88);
+}
+
+.project-card-label {
+  margin-top: 10px;
+}
+
+.project-card-label h2 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.project-card-label p {
+  font-family: 'Lekton', monospace;
+  font-size: 13px;
+  opacity: 0.55;
+  margin-top: 3px;
+}
+
+/* ─── PROJECT PAGE ─── */
+
+.project-page {
+  padding: 64px 48px 96px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.project-left {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.carousel-section > h3 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  margin-bottom: 14px;
+}
+
+/* ─── CAROUSEL ─── */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #c2c3b8;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bg);
+  border: 1px solid var(--text);
+  color: var(--text);
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 2;
+  transition: background 0.2s ease, color 0.2s ease;
+  line-height: 1;
+}
+
+.carousel-btn:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.carousel-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--text);
+  opacity: 0.2;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.carousel-dot.active {
+  opacity: 1;
+}
+
+/* ─── PROJECT RIGHT ─── */
+
+.project-right {
+  padding-top: 4px;
+}
+
+.project-meta {
+  margin-bottom: 48px;
+}
+
+.project-meta h1 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+}
+
+.meta-row {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 20px;
+}
+
+.meta-item label {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.meta-item span {
+  font-family: 'Lekton', monospace;
+  font-size: 14px;
+}
+
+.project-description h3 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  margin-bottom: 14px;
+}
+
+.project-description p {
+  font-family: 'Lekton', monospace;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 460px;
+}
+
+/* ─── SIMPLE PAGES (About, Resume, Contact) ─── */
+
+.simple-page {
+  padding: 72px 48px 96px;
+  max-width: 680px;
+}
+
+.simple-page h1 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 48px);
+  letter-spacing: -0.01em;
+  margin-bottom: 48px;
+}
+
+.simple-page p {
+  font-family: 'Lekton', monospace;
+  font-size: 15px;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+/* ─── ABOUT ─── */
+
+.about-page {
+  padding: 72px 48px 96px;
+  max-width: 960px;
+}
+
+.about-page h1 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 48px);
+  letter-spacing: -0.01em;
+  margin-bottom: 48px;
+}
+
+.about-body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.about-headshot {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.about-body p {
+  font-family: 'Lekton', monospace;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+@media (max-width: 640px) {
+  .about-page {
+    padding: 48px 24px 72px;
+  }
+
+  .about-body {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-headshot {
+    max-width: 240px;
+  }
+}
+
+/* ─── CONTACT ─── */
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-link label {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
+.contact-link a,
+.contact-link span {
+  font-family: 'Lekton', monospace;
+  font-size: 16px;
+  color: var(--text);
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.contact-link a {
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 1px;
+}
+
+.contact-link a:hover {
+  opacity: 0.45;
+}
+
+/* ─── RESUME PAGE ─── */
+
+.resume-page {
+  padding: 72px 48px 96px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.resume-page h1 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 48px);
+  letter-spacing: -0.01em;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+/* ─── RESUME ─── */
+
+.resume-doc {
+  max-width: 780px;
+  margin: 0 auto;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.14);
+}
+
+.resume-doc img {
+  width: 100%;
+  display: block;
+  image-rendering: high-quality;
+}
+
+/* ─── RESPONSIVE ─── */
+
+@media (max-width: 900px) {
+  .project-page {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 48px 32px 72px;
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    padding: 0 24px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  .landing-container {
+    height: auto;
+    padding: 40px 24px 56px;
+    align-items: flex-start;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .project-card-img {
+    height: 56vw;
+  }
+
+  .project-page {
+    padding: 40px 24px 64px;
+  }
+
+  .simple-page {
+    padding: 48px 24px 72px;
+  }
+
+  .meta-row {
+    gap: 28px;
+  }
+}
