@@ -3,7 +3,64 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.carousel').forEach(carousel => {
     initCarousel(carousel);
   });
+
+  // Scroll hint arrow — only on project pages
+  initScrollHint();
 });
+
+function initScrollHint() {
+  if (!document.querySelector('.project-page, .ah-page')) return;
+
+  const hint = document.createElement('div');
+  hint.className = 'scroll-hint bounce-down';
+  hint.textContent = '↓';
+  document.body.appendChild(hint);
+
+  function updateHint() {
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10;
+    const atTop = window.scrollY <= 10;
+
+    hint.classList.remove('bounce-down', 'bounce-up');
+
+    if (atBottom) {
+      hint.textContent = '↑';
+      hint.classList.add('bounce-up');
+    } else if (atTop) {
+      hint.textContent = '↓';
+      hint.classList.add('bounce-down');
+    } else {
+      hint.textContent = '↓';
+    }
+  }
+
+  function triggerDoubleBounce() {
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10;
+    const bounceClass = atBottom ? 'double-bounce-up' : 'double-bounce-down';
+
+    hint.classList.remove('bounce-down', 'bounce-up');
+    hint.classList.add(bounceClass);
+
+    hint.addEventListener('animationend', () => {
+      hint.classList.remove(bounceClass);
+      updateHint();
+      resetIdleTimer();
+    }, { once: true });
+  }
+
+  let idleTimer;
+
+  function resetIdleTimer() {
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(triggerDoubleBounce, 15000);
+  }
+
+  window.addEventListener('scroll', () => {
+    updateHint();
+    resetIdleTimer();
+  }, { passive: true });
+
+  resetIdleTimer();
+}
 
 function initCarousel(carousel) {
   const track = carousel.querySelector('.carousel-track');
