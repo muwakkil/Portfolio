@@ -316,6 +316,20 @@ main {
   font-size: 14px;
 }
 
+.project-link {
+  font-family: 'Lekton', monospace;
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 1px;
+  transition: opacity 0.2s ease;
+}
+
+.project-link:hover {
+  opacity: 0.45;
+}
+
 .project-description h3 {
   font-family: 'Source Code Pro', monospace;
   font-weight: 700;
@@ -555,7 +569,7 @@ main {
 
 .ah-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.35fr 1fr;
   gap: 72px;
   padding-bottom: 80px;
   margin-bottom: 80px;
@@ -597,7 +611,7 @@ main {
 .ah-section-title {
   font-family: 'Source Code Pro', monospace;
   font-weight: 700;
-  font-size: clamp(15px, 1.8vw, 22px);
+  font-size: clamp(17px, 1.8vw, 22px);
   letter-spacing: -0.01em;
   line-height: 1.2;
   margin-bottom: 28px;
