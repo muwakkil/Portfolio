@@ -114,16 +114,24 @@ main {
 .landing-container {
   height: calc(100vh - var(--header-height));
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 28px 48px;
+  justify-content: flex-start;
+  gap: 28px;
+  padding: 20px 24px;
+}
+
+.landing-title img {
+  max-width: 520px;
+  width: 100%;
+  display: block;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px 48px;
-  max-width: 880px;
+  gap: 16px 32px;
+  max-width: 1300px;
   width: 100%;
 }
 
@@ -135,8 +143,7 @@ main {
 
 .project-card-img {
   width: 100%;
-  /* fit two rows + labels + gaps inside the viewport */
-  height: calc((100vh - var(--header-height) - 56px - 20px - 76px) / 2);
+  aspect-ratio: 5 / 4;
   overflow: hidden;
   background-color: #c2c3b8;
 }
@@ -351,7 +358,8 @@ main {
 
 .simple-page {
   padding: 72px 48px 96px;
-  max-width: 680px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .simple-page h1 {
@@ -372,8 +380,8 @@ main {
 /* ─── ABOUT ─── */
 
 .about-page {
-  padding: 72px 48px 96px;
-  max-width: 960px;
+  padding: 72px 64px 96px;
+  width: 100%;
 }
 
 .about-page h1 {
@@ -382,17 +390,23 @@ main {
   font-size: clamp(28px, 4vw, 48px);
   letter-spacing: -0.01em;
   margin-bottom: 48px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-body {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 56px;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .about-headshot {
   width: 100%;
+  max-height: calc(100vh - var(--header-height) - 144px);
   aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: top;
