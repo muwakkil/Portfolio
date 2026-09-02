@@ -51,7 +51,7 @@ function initScrollHint() {
 
   function resetIdleTimer() {
     clearTimeout(idleTimer);
-    idleTimer = setTimeout(triggerDoubleBounce, 15000);
+    idleTimer = setTimeout(triggerDoubleBounce, 8000);
   }
 
   window.addEventListener('scroll', () => {

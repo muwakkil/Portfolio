@@ -19,7 +19,7 @@ html {
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'Lekton', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   min-height: 100vh;
@@ -72,7 +72,7 @@ nav {
 }
 
 nav a {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 11px;
   letter-spacing: 0.12em;
@@ -166,7 +166,7 @@ main {
 }
 
 .project-card-label h2 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.06em;
@@ -174,7 +174,7 @@ main {
 }
 
 .project-card-label p {
-  font-family: 'Lekton', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   opacity: 0.55;
   margin-top: 3px;
@@ -198,7 +198,7 @@ main {
 }
 
 .carousel-section > h3 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 10px;
   letter-spacing: 0.18em;
@@ -293,7 +293,7 @@ main {
 }
 
 .project-meta h1 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: clamp(26px, 3vw, 40px);
   line-height: 1.1;
@@ -308,7 +308,7 @@ main {
 }
 
 .meta-item label {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 10px;
   letter-spacing: 0.16em;
@@ -319,12 +319,12 @@ main {
 }
 
 .meta-item span {
-  font-family: 'Lekton', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 
 .project-link {
-  font-family: 'Lekton', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: var(--text);
   text-decoration: none;
@@ -338,7 +338,7 @@ main {
 }
 
 .project-description h3 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 10px;
   letter-spacing: 0.18em;
@@ -348,7 +348,7 @@ main {
 }
 
 .project-description p {
-  font-family: 'Lekton', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.8;
   max-width: 460px;
@@ -363,7 +363,7 @@ main {
 }
 
 .simple-page h1 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 4vw, 48px);
   letter-spacing: -0.01em;
@@ -371,7 +371,7 @@ main {
 }
 
 .simple-page p {
-  font-family: 'Lekton', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.85;
   margin-bottom: 20px;
@@ -385,7 +385,7 @@ main {
 }
 
 .about-page h1 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 4vw, 48px);
   letter-spacing: -0.01em;
@@ -414,7 +414,7 @@ main {
 }
 
 .about-body p {
-  font-family: 'Lekton', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.85;
 }
@@ -449,7 +449,7 @@ main {
 }
 
 .contact-link label {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 10px;
   letter-spacing: 0.18em;
@@ -459,7 +459,7 @@ main {
 
 .contact-link a,
 .contact-link span {
-  font-family: 'Lekton', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: var(--text);
   text-decoration: none;
@@ -492,7 +492,7 @@ main {
 }
 
 .resume-page h1 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 4vw, 48px);
   letter-spacing: -0.01em;
@@ -500,7 +500,7 @@ main {
 }
 
 .resume-download {
-  font-family: 'Lekton', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: var(--text);
   text-decoration: none;
@@ -542,55 +542,55 @@ main {
   position: fixed;
   bottom: 32px;
   right: 40px;
-  font-family: 'Source Code Pro', monospace;
-  font-size: 18px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 28px;
   color: var(--text);
   opacity: 0.35;
   pointer-events: none;
 }
 
 .scroll-hint.bounce-down {
-  animation: scrollBounceDown 2.6s ease-in-out infinite;
+  animation: scrollBounceDown 3.2s ease-in-out infinite;
 }
 
 .scroll-hint.bounce-up {
-  animation: scrollBounceUp 2.6s ease-in-out infinite;
+  animation: scrollBounceUp 3.2s ease-in-out infinite;
 }
 
 @keyframes scrollBounceDown {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
+  0%, 100% { transform: translateY(0); opacity: 0.35; }
+  50% { transform: translateY(6px); opacity: 1; }
 }
 
 @keyframes scrollBounceUp {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  0%, 100% { transform: translateY(0); opacity: 0.35; }
+  50% { transform: translateY(-6px); opacity: 1; }
 }
 
 .scroll-hint.double-bounce-down {
-  animation: scrollDoubleBounceDown 2.6s ease-in-out;
+  animation: scrollDoubleBounceDown 6.4s ease-in-out;
 }
 
 .scroll-hint.double-bounce-up {
-  animation: scrollDoubleBounceUp 2.6s ease-in-out;
+  animation: scrollDoubleBounceUp 6.4s ease-in-out;
 }
 
 @keyframes scrollDoubleBounceDown {
-  0%   { transform: translateY(0); }
-  20%  { transform: translateY(8px); }
-  40%  { transform: translateY(0); }
-  60%  { transform: translateY(8px); }
-  80%  { transform: translateY(0); }
-  100% { transform: translateY(0); }
+  0%   { transform: translateY(0); opacity: 0.35; }
+  20%  { transform: translateY(8px); opacity: 1; }
+  40%  { transform: translateY(0); opacity: 0.35; }
+  60%  { transform: translateY(8px); opacity: 1; }
+  80%  { transform: translateY(0); opacity: 0.35; }
+  100% { transform: translateY(0); opacity: 0.35; }
 }
 
 @keyframes scrollDoubleBounceUp {
-  0%   { transform: translateY(0); }
-  20%  { transform: translateY(-8px); }
-  40%  { transform: translateY(0); }
-  60%  { transform: translateY(-8px); }
-  80%  { transform: translateY(0); }
-  100% { transform: translateY(0); }
+  0%   { transform: translateY(0); opacity: 0.35; }
+  20%  { transform: translateY(-8px); opacity: 1; }
+  40%  { transform: translateY(0); opacity: 0.35; }
+  60%  { transform: translateY(-8px); opacity: 1; }
+  80%  { transform: translateY(0); opacity: 0.35; }
+  100% { transform: translateY(0); opacity: 0.35; }
 }
 
 /* ─── AFTER HOURS STACKED LAYOUT ─── */
@@ -633,7 +633,7 @@ main {
 }
 
 .ah-section-num {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 10px;
   letter-spacing: 0.18em;
@@ -643,7 +643,7 @@ main {
 }
 
 .ah-section-title {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: clamp(17px, 1.8vw, 22px);
   letter-spacing: -0.01em;
@@ -652,7 +652,7 @@ main {
 }
 
 .ah-body p {
-  font-family: 'Lekton', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.8;
   margin-bottom: 12px;
@@ -663,7 +663,7 @@ main {
 }
 
 .ah-body ul {
-  font-family: 'Lekton', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.8;
   padding-left: 18px;
