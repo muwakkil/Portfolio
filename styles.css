@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 :root {
   --bg: #d6d7cc;
   --text: #000000;
@@ -14,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -303,7 +309,8 @@ main {
 
 .meta-row {
   display: flex;
-  gap: 48px;
+  flex-wrap: wrap;
+  gap: 20px 48px;
   margin-bottom: 20px;
 }
 
