@@ -603,10 +603,12 @@ main {
 /* ─── SPEAKING IN MOTIFS FULL-WIDTH LAYOUT ─── */
 
 .sim-page {
+  width: 100%;
   padding-bottom: 96px;
 }
 
 .sim-section {
+  width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
@@ -626,9 +628,9 @@ main {
 
 .sim-images img {
   width: 100%;
+  height: auto;
   display: block;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  max-width: none;
 }
 
 .sim-images img + img {
