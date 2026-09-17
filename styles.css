@@ -637,6 +637,43 @@ main {
   margin-top: 3px;
 }
 
+.sim-bonus {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.sim-bonus summary {
+  padding: 18px 48px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.sim-bonus summary::-webkit-details-marker {
+  display: none;
+}
+
+.sim-bonus summary:hover {
+  opacity: 0.5;
+}
+
+.sim-bonus img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: none;
+}
+
+@media (max-width: 640px) {
+  .sim-bonus summary {
+    padding: 16px 20px;
+  }
+}
+
 @media (max-width: 900px) {
   .sim-text {
     padding: 48px 32px 32px;
