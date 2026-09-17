@@ -662,10 +662,11 @@ main {
 }
 
 .sim-bonus img {
-  width: 100%;
-  height: auto;
   display: block;
+  width: calc(100% - clamp(0px, 15vw, 240px));
+  height: auto;
   max-width: none;
+  margin: 0 auto;
 }
 
 @media (max-width: 640px) {
