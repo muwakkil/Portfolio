@@ -593,6 +593,53 @@ main {
   100% { transform: translateY(0); opacity: 0.35; }
 }
 
+/* ─── SPEAKING IN MOTIFS FULL-WIDTH LAYOUT ─── */
+
+.sim-page {
+  padding-bottom: 96px;
+}
+
+.sim-section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.sim-section:last-child {
+  border-bottom: none;
+}
+
+.sim-text {
+  padding: 64px 48px 40px;
+  max-width: 760px;
+}
+
+.sim-images {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sim-images img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.sim-images img + img {
+  margin-top: 3px;
+}
+
+@media (max-width: 900px) {
+  .sim-text {
+    padding: 48px 32px 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sim-text {
+    padding: 40px 20px 28px;
+  }
+}
+
 /* ─── AFTER HOURS STACKED LAYOUT ─── */
 
 .ah-page {

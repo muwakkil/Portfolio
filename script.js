@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initScrollHint() {
-  if (!document.querySelector('.project-page, .ah-page')) return;
+  if (!document.querySelector('.project-page, .ah-page, .sim-page')) return;
 
   const hint = document.createElement('div');
   hint.className = 'scroll-hint bounce-down';
