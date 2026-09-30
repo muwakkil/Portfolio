@@ -616,6 +616,33 @@ main {
   border-bottom: none;
 }
 
+.sim-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  padding: 64px 48px;
+  align-items: start;
+}
+
+.sim-overview .sim-text {
+  padding: 0;
+  max-width: none;
+}
+
+@media (max-width: 900px) {
+  .sim-overview {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 48px 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sim-overview {
+    padding: 40px 20px;
+  }
+}
+
 .sim-text {
   padding: 64px 48px 40px;
   max-width: 760px;
